@@ -11,5 +11,6 @@ color_map = {
     "white": 9,
 }
 
+
 def value(colors):
     return color_map[colors[0]] * 10 + color_map[colors[1]]

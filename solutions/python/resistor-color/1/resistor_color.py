@@ -11,6 +11,7 @@ color_map = {
     "white": 9,
 }
 
+
 def color_code(color):
     return color_map[color]
 

@@ -1,5 +1,5 @@
 def score(x, y):
-    dis = (x ** 2 + y ** 2) ** 0.5
+    dis = (x**2 + y**2) ** 0.5
     if dis <= 1:
         return 10
     if dis <= 5:
