@@ -1,5 +1,5 @@
 def rotate(text, key):
-    ans = ''
+    ans = ""
     for char in text:
         if char.isalpha():
             start = 65 if char.isupper() else 97
