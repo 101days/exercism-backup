@@ -45,6 +45,7 @@ def letter_grades(highest):
     r = (highest - 40) // 4
     return [41, 41 + r, 41 + r * 2, 41 + r * 3]
 
+
 def student_ranking(student_scores, student_names):
     """Organize the student's rank, name, and grade information in descending order.
 
@@ -52,8 +53,10 @@ def student_ranking(student_scores, student_names):
     :param student_names: list - of string names by exam score in descending order.
     :return: list - of strings in format ["<rank>. <student name>: <score>"].
     """
-    return [f"{i+1}. {name}: {score}" for i, (score, name) in enumerate(zip(student_scores, student_names))]
-    
+    return [
+        f"{i+1}. {name}: {score}"
+        for i, (score, name) in enumerate(zip(student_scores, student_names))
+    ]
 
 
 def perfect_score(student_info):

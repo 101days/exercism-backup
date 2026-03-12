@@ -6,7 +6,6 @@ Overview of exchanging currency when travelling: https://www.compareremit.com/mo
 """
 
 
-
 def exchange_money(budget, exchange_rate):
     """
 
@@ -51,7 +50,7 @@ def get_leftover_of_bills(amount, denomination):
     """
 
     :param amount: float - the total starting value.
-    :param denomination: int - the value of a single bill.  
+    :param denomination: int - the value of a single bill.
     :return: float - the amount that is "leftover", given the current denomination.
     """
     return amount % denomination

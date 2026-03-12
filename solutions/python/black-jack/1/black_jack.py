@@ -15,12 +15,11 @@ def value_of_card(card):
     2.  'A' (ace card) = 1
     3.  '2' - '10' = numerical value.
     """
-    if card in 'JQK':
+    if card in "JQK":
         return 10
-    if card == 'A':
+    if card == "A":
         return 1
     return int(card)
-    
 
 
 def higher_card(card_one, card_two):
@@ -35,7 +34,7 @@ def higher_card(card_one, card_two):
     """
     val1 = value_of_card(card_one)
     val2 = value_of_card(card_two)
-    
+
     if val1 > val2:
         return card_one
     if val2 > val1:
@@ -53,12 +52,11 @@ def value_of_ace(card_one, card_two):
     2.  'A' (ace card) = 11 (if already in hand)
     3.  '2' - '10' = numerical value.
     """
-    val1 = 11 if card_one == 'A' else value_of_card(card_one)
-    val2 = 11 if card_two == 'A' else value_of_card(card_two)
+    val1 = 11 if card_one == "A" else value_of_card(card_one)
+    val2 = 11 if card_two == "A" else value_of_card(card_two)
     if val1 + val2 + 11 <= 21:
         return 11
     return 1
-    
 
 
 def is_blackjack(card_one, card_two):
@@ -71,8 +69,10 @@ def is_blackjack(card_one, card_two):
     2.  'A' (ace card) = 11 (if already in hand)
     3.  '2' - '10' = numerical value.
     """
-    ten_cards = ('10', 'J', 'Q', 'K')
-    return (card_one == 'A' and card_two in ten_cards) or (card_two == 'A' and card_one in ten_cards)
+    ten_cards = ("10", "J", "Q", "K")
+    return (card_one == "A" and card_two in ten_cards) or (
+        card_two == "A" and card_one in ten_cards
+    )
 
 
 def can_split_pairs(card_one, card_two):
